@@ -1,0 +1,132 @@
+   1               		.file	"example.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__ = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.uart_print_P,"ax",@progbits
+  17               	.global	uart_print_P
+  19               	uart_print_P:
+  20               	.LFB0:
+  21               	.LSM0:
+  22               	.LVL0:
+  23 0000 CF93      		push r28
+  24 0002 DF93      		push r29
+  25               	/* prologue: function */
+  26               	/* frame size = 0 */
+  27               	/* stack size = 2 */
+  28               	.L__stack_usage = 2
+  29 0004 EC01      		movw r28,r24
+  30               	.LVL1:
+  31               	.L3:
+  32               	.LSM1:
+  33 0006 FE01      		movw r30,r28
+  34               	.LVL2:
+  35               	.LBB2:
+  36               	.LSM2:
+  37 0008 2196      		adiw r28,1
+  38               	.LVL3:
+  39               	/* #APP */
+  40               	 ;  16 "example.c" 1
+  41 000a 8491      		lpm r24, Z
+  42               		
+  43               	 ;  0 "" 2
+  44               	.LVL4:
+  45               	/* #NOAPP */
+  46               	.LBE2:
+  47               	.LSM3:
+  48 000c 8823      		tst r24
+  49 000e 01F0      		breq .L1
+  50               	.LSM4:
+  51 0010 0E94 0000 		call uart_putchar
+  52               	.LVL5:
+  53               	.LSM5:
+  54 0014 00C0      		rjmp .L3
+  55               	.LVL6:
+  56               	.L1:
+  57               	/* epilogue start */
+  58               	.LSM6:
+  59 0016 DF91      		pop r29
+  60 0018 CF91      		pop r28
+  61               	.LVL7:
+  62 001a 0895      		ret
+  63               	.LFE0:
+  65               		.section	.text.main,"ax",@progbits
+  66               	.global	main
+  68               	main:
+  69               	.LFB1:
+  70               	.LSM7:
+  71 0000 1F93      		push r17
+  72               	/* prologue: function */
+  73               	/* frame size = 0 */
+  74               	/* stack size = 1 */
+  75               	.L__stack_usage = 1
+  76               	.LSM8:
+  77 0002 80E8      		ldi r24,lo8(-128)
+  78 0004 8093 6100 		sts 97,r24
+  79 0008 1092 6100 		sts 97,__zero_reg__
+  80               	.LSM9:
+  81 000c 60E0      		ldi r22,lo8(38400)
+  82 000e 76E9      		ldi r23,hi8(38400)
+  83 0010 80E0      		ldi r24,hlo8(38400)
+  84 0012 90E0      		ldi r25,hhi8(38400)
+  85 0014 0E94 0000 		call uart_init
+  86               	.LSM10:
+  87 0018 80E0      		ldi r24,lo8(__c.1423)
+  88 001a 90E0      		ldi r25,hi8(__c.1423)
+  89 001c 0E94 0000 		call uart_print_P
+  90               	.L9:
+  91               	.LSM11:
+  92 0020 0E94 0000 		call uart_available
+  93 0024 8823      		tst r24
+  94 0026 01F0      		breq .L9
+  95               	.LSM12:
+  96 0028 0E94 0000 		call uart_getchar
+  97 002c 182F      		mov r17,r24
+  98               	.LVL8:
+  99               	.LSM13:
+ 100 002e 80E0      		ldi r24,lo8(__c.1425)
+ 101 0030 90E0      		ldi r25,hi8(__c.1425)
+ 102               	.LVL9:
+ 103 0032 0E94 0000 		call uart_print_P
+ 104               	.LSM14:
+ 105 0036 812F      		mov r24,r17
+ 106 0038 0E94 0000 		call uart_putchar
+ 107               	.LSM15:
+ 108 003c 8DE0      		ldi r24,lo8(13)
+ 109 003e 0E94 0000 		call uart_putchar
+ 110               	.LSM16:
+ 111 0042 8AE0      		ldi r24,lo8(10)
+ 112 0044 0E94 0000 		call uart_putchar
+ 113 0048 00C0      		rjmp .L9
+ 114               	.LFE1:
+ 116               		.section	.progmem.data,"a",@progbits
+ 119               	__c.1425:
+ 120 0000 4279 7465 		.string	"Byte: "
+ 120      3A20 00
+ 123               	__c.1423:
+ 124 0007 5541 5254 		.string	"UART Example\r\n"
+ 124      2045 7861 
+ 124      6D70 6C65 
+ 124      0D0A 00
+ 157               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 example.c
+     /tmp/ccI1KqcR.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccI1KqcR.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccI1KqcR.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccI1KqcR.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccI1KqcR.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccI1KqcR.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccI1KqcR.s:19     .text.uart_print_P:00000000 uart_print_P
+     /tmp/ccI1KqcR.s:68     .text.main:00000000 main
+     /tmp/ccI1KqcR.s:123    .progmem.data:00000007 __c.1423
+     /tmp/ccI1KqcR.s:119    .progmem.data:00000000 __c.1425
+
+UNDEFINED SYMBOLS
+uart_putchar
+uart_init
+uart_available
+uart_getchar

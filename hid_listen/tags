@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = gcc$/;"	m
+CC	Makefile	/^CC = i586-mingw32msvc-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS =  -O2 -Wall -D$(OS)$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -O2 -Wall -D$(OS)$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -O2 -Wall -isysroot $(SDK) -D$(OS) -arch ppc -arch i386$/;"	m
+KEY_PVK	Makefile	/^KEY_PVK = ~\/bin\/cert\/mykey.pvk$/;"	m
+KEY_SPC	Makefile	/^KEY_SPC = ~\/bin\/cert\/mykey.spc$/;"	m
+KEY_TS	Makefile	/^KEY_TS = http:\/\/timestamp.comodoca.com\/authenticode$/;"	m
+LIBS	Makefile	/^LIBS = -Xlinker -syslibroot -Xlinker $(SDK) -framework IOKit -framework CoreFoundation$/;"	m
+LIBS	Makefile	/^LIBS = -lhid -lsetupapi$/;"	m
+LIBS	Makefile	/^LIBS =$/;"	m
+MAKEFLAGS	Makefile	/^MAKEFLAGS = --jobs=2$/;"	m
+OBJS	Makefile	/^OBJS = hid_listen.o rawhid.o$/;"	m
+OPERATING_SYSTEM	rawhid.c	247;"	d	file:
+OPERATING_SYSTEM	rawhid.c	43;"	d	file:
+OPERATING_SYSTEM	rawhid.c	479;"	d	file:
+OPERATING_SYSTEM	rawhid.c	54;"	d	file:
+OS	Makefile	/^OS = LINUX$/;"	m
+PROG	Makefile	/^PROG = hid_listen$/;"	m
+SDK	Makefile	/^SDK = \/Developer\/SDKs\/MacOSX10.5.sdk$/;"	m
+STRIP	Makefile	/^STRIP = i586-mingw32msvc-strip$/;"	m
+STRIP	Makefile	/^STRIP = strip$/;"	m
+TARGET	Makefile	/^TARGET = $(PROG)$/;"	m
+TARGET	Makefile	/^TARGET = $(PROG).exe$/;"	m
+WINDRES	Makefile	/^WINDRES = i586-mingw32msvc-windres$/;"	m
+buffer	rawhid.c	/^	uint8_t *buffer;$/;"	m	struct:rawhid_struct	file:
+buffer_report_id	rawhid.c	/^	int buffer_report_id;$/;"	m	struct:rawhid_struct	file:
+buffer_used	rawhid.c	/^	int buffer_used;$/;"	m	struct:rawhid_struct	file:
+delay_ms	hid_listen.c	/^static void delay_ms(unsigned int msec)$/;"	f	file:
+disconnected	rawhid.c	/^	int disconnected;$/;"	m	struct:rawhid_struct	file:
+fd	rawhid.c	/^	int fd;$/;"	m	struct:rawhid_struct	file:
+handle	rawhid.c	/^	HANDLE handle;$/;"	m	struct:rawhid_struct	file:
+input_callback	rawhid.c	/^static void input_callback(void *context, IOReturn result, void *sender, $/;"	f	file:
+isok	rawhid.c	/^	int isok;$/;"	m	struct:rawhid_struct	file:
+main	hid_listen.c	/^int main(void)$/;"	f
+name	rawhid.c	/^	int name;$/;"	m	struct:rawhid_struct	file:
+rawhid_close	rawhid.c	/^void rawhid_close(rawhid_t *h)$/;"	f
+rawhid_close	rawhid.c	/^void rawhid_close(rawhid_t *hid)$/;"	f
+rawhid_included_h__	rawhid.h	2;"	d
+rawhid_list_t	rawhid.h	/^typedef void rawhid_list_t;$/;"	t
+rawhid_open_only1	rawhid.c	/^rawhid_t * rawhid_open_only1(int vid, int pid, int usage_page, int usage)$/;"	f
+rawhid_read	rawhid.c	/^int rawhid_read(rawhid_t *h, void *buf, int bufsize, int timeout_ms)$/;"	f
+rawhid_status	rawhid.c	/^int rawhid_status(rawhid_t *hid)$/;"	f
+rawhid_struct	rawhid.c	/^struct rawhid_struct {$/;"	s	file:
+rawhid_t	rawhid.h	/^typedef void rawhid_t;$/;"	t
+rawhid_write	rawhid.c	/^int rawhid_write(rawhid_t *h, const void *buf, int len, int timeout_ms)$/;"	f
+rawhid_write	rawhid.c	/^int rawhid_write(rawhid_t *hid, const void *buf, int len, int timeout_ms)$/;"	f
+ref	rawhid.c	/^	IOHIDDeviceRef ref;$/;"	m	struct:rawhid_struct	file:
+unplug_callback	rawhid.c	/^static void unplug_callback(void *hid, IOReturn ret, void *ref)$/;"	f	file:

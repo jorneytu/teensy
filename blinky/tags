@@ -1,0 +1,194 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+-set-section-flags	Makefile	/^	-$(OBJCOPY) -j .eeprom --set-section-flags=.eeprom="alloc,load" \\$/;"	m
+ADEFS	Makefile	/^ADEFS = -DF_CPU=$(F_CPU)$/;"	m
+ALL_ASFLAGS	Makefile	/^ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)$/;"	m
+ALL_CFLAGS	Makefile	/^ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)$/;"	m
+ALL_CPPFLAGS	Makefile	/^ALL_CPPFLAGS = -mmcu=$(MCU) -I. -x c++ $(CPPFLAGS) $(GENDEPFLAGS)$/;"	m
+AR	Makefile	/^AR = avr-ar rcs$/;"	m
+ASFLAGS	Makefile	/^ASFLAGS = $(ADEFS) -Wa,-adhlns=$(<:%.S=$(OBJDIR)\/%.lst),-gstabs,--listing-cont-lines=100$/;"	m
+ASRC	Makefile	/^ASRC =$/;"	m
+AVRDUDE	Makefile	/^AVRDUDE = avrdude$/;"	m
+AVRDUDE_FLAGS	Makefile	/^AVRDUDE_FLAGS = -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER)$/;"	m
+AVRDUDE_PORT	Makefile	/^AVRDUDE_PORT = com1    # programmer connected to serial device$/;"	m
+AVRDUDE_PROGRAMMER	Makefile	/^AVRDUDE_PROGRAMMER = stk500v2$/;"	m
+AVRDUDE_WRITE_FLASH	Makefile	/^AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex$/;"	m
+CC	Makefile	/^CC = avr-gcc$/;"	m
+CDC_GET_LINE_CODING	usb_debug_only.h	81;"	d
+CDC_SET_CONTROL_LINE_STATE	usb_debug_only.h	82;"	d
+CDC_SET_LINE_CODING	usb_debug_only.h	80;"	d
+CDEFS	Makefile	/^CDEFS = -DF_CPU=$(F_CPU)UL$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g$(DEBUG)$/;"	m
+CLEAR_FEATURE	usb_debug_only.h	65;"	d
+COFFCONVERT	Makefile	/^COFFCONVERT = $(OBJCOPY) --debugging$/;"	m
+CONFIG1_DESC_SIZE	usb_debug_only.c	126;"	d	file:
+COPY	Makefile	/^COPY = cp$/;"	m
+CPPDEFS	Makefile	/^CPPDEFS = -DF_CPU=$(F_CPU)UL$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = -g$(DEBUG)$/;"	m
+CPPSRC	Makefile	/^CPPSRC = $/;"	m
+CPU_PRESCALE	blinky.c	43;"	d	file:
+CSTANDARD	Makefile	/^CSTANDARD = -std=gnu99$/;"	m
+DEBUG	Makefile	/^DEBUG = dwarf-2$/;"	m
+DEBUG_BACKEND	Makefile	/^DEBUG_BACKEND = avarice$/;"	m
+DEBUG_HOST	Makefile	/^DEBUG_HOST = localhost$/;"	m
+DEBUG_MFREQ	Makefile	/^DEBUG_MFREQ = $(F_CPU)$/;"	m
+DEBUG_PORT	Makefile	/^DEBUG_PORT = 4242$/;"	m
+DEBUG_TX_BUFFER	usb_debug_only.c	73;"	d	file:
+DEBUG_TX_ENDPOINT	usb_debug_only.c	71;"	d	file:
+DEBUG_TX_SIZE	usb_debug_only.c	72;"	d	file:
+DEBUG_UI	Makefile	/^DEBUG_UI = insight$/;"	m
+DIT	blinky.c	44;"	d	file:
+ELFSIZE	Makefile	/^ELFSIZE = $(SIZE) $(TARGET).elf$/;"	m
+ENDPOINT0_SIZE	usb_debug_only.c	70;"	d	file:
+EP_DOUBLE_BUFFER	usb_debug_only.h	29;"	d
+EP_SINGLE_BUFFER	usb_debug_only.h	28;"	d
+EP_SIZE	usb_debug_only.h	31;"	d
+EP_TYPE_BULK_IN	usb_debug_only.h	21;"	d
+EP_TYPE_BULK_OUT	usb_debug_only.h	22;"	d
+EP_TYPE_CONTROL	usb_debug_only.h	20;"	d
+EP_TYPE_INTERRUPT_IN	usb_debug_only.h	23;"	d
+EP_TYPE_INTERRUPT_OUT	usb_debug_only.h	24;"	d
+EP_TYPE_ISOCHRONOUS_IN	usb_debug_only.h	25;"	d
+EP_TYPE_ISOCHRONOUS_OUT	usb_debug_only.h	26;"	d
+EXTMEMOPTS	Makefile	/^EXTMEMOPTS =$/;"	m
+EXTRAINCDIRS	Makefile	/^EXTRAINCDIRS = $/;"	m
+EXTRALIBDIRS	Makefile	/^EXTRALIBDIRS = $/;"	m
+FORMAT	Makefile	/^FORMAT = ihex$/;"	m
+F_CPU	Makefile	/^F_CPU = 16000000$/;"	m
+GDBINIT_FILE	Makefile	/^GDBINIT_FILE = __avr_gdbinit$/;"	m
+GENDEPFLAGS	Makefile	/^GENDEPFLAGS = -MMD -MP -MF .dep\/$(@F).d$/;"	m
+GET_CONFIGURATION	usb_debug_only.h	69;"	d
+GET_DESCRIPTOR	usb_debug_only.h	68;"	d
+GET_INTERFACE	usb_debug_only.h	71;"	d
+GET_STATUS	usb_debug_only.h	64;"	d
+HEXSIZE	Makefile	/^HEXSIZE = $(SIZE) --target=$(FORMAT) $(TARGET).hex$/;"	m
+HID_DESC2_OFFSET	usb_debug_only.c	127;"	d	file:
+HID_GET_PROTOCOL	usb_debug_only.h	75;"	d
+HID_GET_REPORT	usb_debug_only.h	74;"	d
+HID_SET_IDLE	usb_debug_only.h	77;"	d
+HID_SET_PROTOCOL	usb_debug_only.h	78;"	d
+HID_SET_REPORT	usb_debug_only.h	76;"	d
+HW_CONFIG	usb_debug_only.h	42;"	d
+HW_CONFIG	usb_debug_only.h	47;"	d
+HW_CONFIG	usb_debug_only.h	52;"	d
+HW_CONFIG	usb_debug_only.h	57;"	d
+ISR	usb_debug_only.c	/^ISR(USB_COM_vect)$/;"	f
+ISR	usb_debug_only.c	/^ISR(USB_GEN_vect)$/;"	f
+JTAG_DEV	Makefile	/^JTAG_DEV = \/dev\/com1$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = -Wl,-Map=$(TARGET).map,--cref$/;"	m
+LED_CONFIG	blinky.c	42;"	d	file:
+LED_OFF	blinky.c	34;"	d	file:
+LED_OFF	blinky.c	39;"	d	file:
+LED_ON	blinky.c	33;"	d	file:
+LED_ON	blinky.c	38;"	d	file:
+LIBNAME	Makefile	/^LIBNAME=lib$(TARGET).a$/;"	m
+LSB	usb_debug_only.h	38;"	d
+LST	Makefile	/^LST = $(SRC:%.c=$(OBJDIR)\/%.lst) $(CPPSRC:%.cpp=$(OBJDIR)\/%.lst) $(ASRC:%.S=$(OBJDIR)\/%.lst) $/;"	m
+MATH_LIB	Makefile	/^MATH_LIB = -lm$/;"	m
+MAX_ENDPOINT	usb_debug_only.h	36;"	d
+MCU	Makefile	/^MCU = atmega32u4        # Teensy 2.0$/;"	m
+MSB	usb_debug_only.h	39;"	d
+MSG_ASSEMBLING	Makefile	/^MSG_ASSEMBLING = Assembling:$/;"	m
+MSG_BEGIN	Makefile	/^MSG_BEGIN = -------- begin --------$/;"	m
+MSG_CLEANING	Makefile	/^MSG_CLEANING = Cleaning project:$/;"	m
+MSG_COFF	Makefile	/^MSG_COFF = Converting to AVR COFF:$/;"	m
+MSG_COMPILING	Makefile	/^MSG_COMPILING = Compiling C:$/;"	m
+MSG_COMPILING_CPP	Makefile	/^MSG_COMPILING_CPP = Compiling C++:$/;"	m
+MSG_CREATING_LIBRARY	Makefile	/^MSG_CREATING_LIBRARY = Creating library:$/;"	m
+MSG_EEPROM	Makefile	/^MSG_EEPROM = Creating load file for EEPROM:$/;"	m
+MSG_END	Makefile	/^MSG_END = --------  end  --------$/;"	m
+MSG_ERRORS_NONE	Makefile	/^MSG_ERRORS_NONE = Errors: none$/;"	m
+MSG_EXTENDED_COFF	Makefile	/^MSG_EXTENDED_COFF = Converting to AVR Extended COFF:$/;"	m
+MSG_EXTENDED_LISTING	Makefile	/^MSG_EXTENDED_LISTING = Creating Extended Listing:$/;"	m
+MSG_FLASH	Makefile	/^MSG_FLASH = Creating load file for Flash:$/;"	m
+MSG_LINKING	Makefile	/^MSG_LINKING = Linking:$/;"	m
+MSG_SIZE_AFTER	Makefile	/^MSG_SIZE_AFTER = Size after:$/;"	m
+MSG_SIZE_BEFORE	Makefile	/^MSG_SIZE_BEFORE = Size before: $/;"	m
+MSG_SYMBOL_TABLE	Makefile	/^MSG_SYMBOL_TABLE = Creating Symbol Table:$/;"	m
+NM	Makefile	/^NM = avr-nm$/;"	m
+NUM_DESC_LIST	usb_debug_only.c	207;"	d	file:
+OBJ	Makefile	/^OBJ = $(SRC:%.c=$(OBJDIR)\/%.o) $(CPPSRC:%.cpp=$(OBJDIR)\/%.o) $(ASRC:%.S=$(OBJDIR)\/%.o) $/;"	m
+OBJCOPY	Makefile	/^OBJCOPY = avr-objcopy$/;"	m
+OBJDIR	Makefile	/^OBJDIR = .$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP = avr-objdump$/;"	m
+OPT	Makefile	/^OPT = s$/;"	m
+PLL_CONFIG	usb_debug_only.h	43;"	d
+PLL_CONFIG	usb_debug_only.h	48;"	d
+PLL_CONFIG	usb_debug_only.h	53;"	d
+PLL_CONFIG	usb_debug_only.h	58;"	d
+PRINTF_LIB	Makefile	/^PRINTF_LIB = $/;"	m
+PRINTF_LIB_FLOAT	Makefile	/^PRINTF_LIB_FLOAT = -Wl,-u,vfprintf -lprintf_flt$/;"	m
+PRINTF_LIB_MIN	Makefile	/^PRINTF_LIB_MIN = -Wl,-u,vfprintf -lprintf_min$/;"	m
+PRODUCT_ID	usb_debug_only.c	47;"	d	file:
+REMOVE	Makefile	/^REMOVE = rm -f$/;"	m
+REMOVEDIR	Makefile	/^REMOVEDIR = rm -rf$/;"	m
+SCANF_LIB	Makefile	/^SCANF_LIB = $/;"	m
+SCANF_LIB_FLOAT	Makefile	/^SCANF_LIB_FLOAT = -Wl,-u,vfscanf -lscanf_flt$/;"	m
+SCANF_LIB_MIN	Makefile	/^SCANF_LIB_MIN = -Wl,-u,vfscanf -lscanf_min$/;"	m
+SET_ADDRESS	usb_debug_only.h	67;"	d
+SET_CONFIGURATION	usb_debug_only.h	70;"	d
+SET_FEATURE	usb_debug_only.h	66;"	d
+SET_INTERFACE	usb_debug_only.h	72;"	d
+SHELL	Makefile	/^SHELL = sh$/;"	m
+SIZE	Makefile	/^SIZE = avr-size$/;"	m
+SRC	Makefile	/^SRC =	$(TARGET).c \\$/;"	m
+STR_MANUFACTURER	usb_debug_only.c	38;"	d	file:
+STR_PRODUCT	usb_debug_only.c	39;"	d	file:
+SUPPORT_ENDPOINT_HALT	usb_debug_only.c	55;"	d	file:
+TARGET	Makefile	/^TARGET = blinky$/;"	m
+USB_CONFIG	usb_debug_only.h	44;"	d
+USB_CONFIG	usb_debug_only.h	49;"	d
+USB_CONFIG	usb_debug_only.h	54;"	d
+USB_CONFIG	usb_debug_only.h	59;"	d
+USB_DEBUG_HID	usb_debug_only.h	11;"	d
+USB_FREEZE	usb_debug_only.h	45;"	d
+USB_FREEZE	usb_debug_only.h	50;"	d
+USB_FREEZE	usb_debug_only.h	55;"	d
+USB_FREEZE	usb_debug_only.h	60;"	d
+USB_SERIAL_PRIVATE_INCLUDE	usb_debug_only.c	27;"	d	file:
+VENDOR_ID	usb_debug_only.c	46;"	d	file:
+WINSHELL	Makefile	/^WINSHELL = cmd$/;"	m
+addr	usb_debug_only.c	/^	const uint8_t	*addr;$/;"	m	struct:descriptor_list_struct	file:
+bDescriptorType	usb_debug_only.c	/^	uint8_t bDescriptorType;$/;"	m	struct:usb_string_descriptor_struct	file:
+bLength	usb_debug_only.c	/^	uint8_t bLength;$/;"	m	struct:usb_string_descriptor_struct	file:
+config1_descriptor	usb_debug_only.c	/^static uint8_t PROGMEM config1_descriptor[CONFIG1_DESC_SIZE] = {$/;"	v	file:
+debug_flush_timer	usb_debug_only.c	/^static volatile uint8_t debug_flush_timer=0;$/;"	v	file:
+descriptor_list	usb_debug_only.c	/^} PROGMEM descriptor_list[] = {$/;"	v	typeref:struct:descriptor_list_struct	file:
+descriptor_list_struct	usb_debug_only.c	/^static struct descriptor_list_struct {$/;"	s	file:
+device_descriptor	usb_debug_only.c	/^static uint8_t PROGMEM device_descriptor[] = {$/;"	v	file:
+endpoint_config_table	usb_debug_only.c	/^static const uint8_t PROGMEM endpoint_config_table[] = {$/;"	v	file:
+hid_report_descriptor	usb_debug_only.c	/^static uint8_t PROGMEM hid_report_descriptor[] = {$/;"	v	file:
+length	usb_debug_only.c	/^	uint8_t		length;$/;"	m	struct:descriptor_list_struct	file:
+main	blinky.c	/^int main(void)$/;"	f
+morse_P	blinky.c	/^void morse_P(const char *s)$/;"	f
+morse_character	blinky.c	/^void morse_character(char c)$/;"	f
+morse_code_table	blinky.c	/^const unsigned char PROGMEM morse_code_table[] = {$/;"	v
+morse_code_table	blinky.c	/^const unsigned char morse_code_table[];$/;"	v
+pchar	print.h	10;"	d
+phex	print.c	/^void phex(unsigned char c)$/;"	f
+phex1	print.c	/^void phex1(unsigned char c)$/;"	f
+phex16	print.c	/^void phex16(unsigned int i)$/;"	f
+print	print.h	9;"	d
+print_P	print.c	/^void print_P(const char *s)$/;"	f
+print_h__	print.h	2;"	d
+string0	usb_debug_only.c	/^static struct usb_string_descriptor_struct PROGMEM string0 = {$/;"	v	typeref:struct:PROGMEM	file:
+string1	usb_debug_only.c	/^static struct usb_string_descriptor_struct PROGMEM string1 = {$/;"	v	typeref:struct:PROGMEM	file:
+string2	usb_debug_only.c	/^static struct usb_string_descriptor_struct PROGMEM string2 = {$/;"	v	typeref:struct:PROGMEM	file:
+usb_ack_out	usb_debug_only.c	/^static inline void usb_ack_out(void)$/;"	f	file:
+usb_configuration	usb_debug_only.c	/^static volatile uint8_t usb_configuration=0;$/;"	v	file:
+usb_configured	usb_debug_only.c	/^uint8_t usb_configured(void)$/;"	f
+usb_debug_flush_output	usb_debug_only.c	/^void usb_debug_flush_output(void)$/;"	f
+usb_debug_putchar	usb_debug_only.c	/^int8_t usb_debug_putchar(uint8_t c)$/;"	f
+usb_init	usb_debug_only.c	/^void usb_init(void)$/;"	f
+usb_send_in	usb_debug_only.c	/^static inline void usb_send_in(void)$/;"	f	file:
+usb_serial_h__	usb_debug_only.h	2;"	d
+usb_string_descriptor_struct	usb_debug_only.c	/^struct usb_string_descriptor_struct {$/;"	s	file:
+usb_wait_in_ready	usb_debug_only.c	/^static inline void usb_wait_in_ready(void)$/;"	f	file:
+usb_wait_receive_out	usb_debug_only.c	/^static inline void usb_wait_receive_out(void)$/;"	f	file:
+wIndex	usb_debug_only.c	/^	uint16_t	wIndex;$/;"	m	struct:descriptor_list_struct	file:
+wString	usb_debug_only.c	/^	int16_t wString[];$/;"	m	struct:usb_string_descriptor_struct	file:
+wValue	usb_debug_only.c	/^	uint16_t	wValue;$/;"	m	struct:descriptor_list_struct	file:

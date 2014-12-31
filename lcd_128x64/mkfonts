@@ -1,0 +1,10 @@
+#! /usr/bin/tcsh
+
+rm -f lcd_fonts.h
+foreach i (*.bdf)
+echo Processing $i....
+../code/bdf2c.pl $i > font_$i:r.c
+#bdf2c.pl $i > font_$i:r.c
+end
+
+

@@ -1,0 +1,411 @@
+   1               		.file	"blinky.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__ = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.morse_character,"ax",@progbits
+  17               	.global	morse_character
+  19               	morse_character:
+  20               	.LFB7:
+  21               	.LSM0:
+  22               	.LVL0:
+  23 0000 0F93      		push r16
+  24 0002 1F93      		push r17
+  25               	/* prologue: function */
+  26               	/* frame size = 0 */
+  27               	/* stack size = 2 */
+  28               	.L__stack_usage = 2
+  29 0004 182F      		mov r17,r24
+  30               	.LSM1:
+  31 0006 8032      		cpi r24,lo8(32)
+  32 0008 01F4      		brne .L2
+  33               	.LVL1:
+  34               	.LSM2:
+  35 000a 80E0      		ldi r24,lo8(__c.1565)
+  36 000c 90E0      		ldi r25,hi8(__c.1565)
+  37 000e 0E94 0000 		call print_P
+  38               	.LVL2:
+  39               	.LBB26:
+  40               	.LBB27:
+  41               	.LSM3:
+  42 0012 8FEF      		 ldi r24,lo8(1791999)
+  43 0014 97E5      	    ldi r25,hi8(1791999)
+  44 0016 ABE1      	    ldi r26,hlo8(1791999)
+  45 0018 8150      	    1:subi r24,1
+  46 001a 9040      	    sbci r25,0
+  47 001c A040      	    sbci r26,0
+  48 001e 01F4      	    brne 1b
+  49 0020 00C0      		rjmp .L10
+  50               	.LVL3:
+  51               	.L2:
+  52               	.LBE27:
+  53               	.LBE26:
+  54               	.LSM4:
+  55 0022 8154      		subi r24,lo8(-(-65))
+  56 0024 8A31      		cpi r24,lo8(26)
+  57 0026 00F0      		brlo .L4
+  58               	.LSM5:
+  59 0028 80E0      		ldi r24,lo8(__c.1567)
+  60 002a 90E0      		ldi r25,hi8(__c.1567)
+  61 002c 0E94 0000 		call print_P
+  62               	.LSM6:
+  63 0030 812F      		mov r24,r17
+  64 0032 0E94 0000 		call usb_debug_putchar
+  65               	.LSM7:
+  66 0036 80E0      		ldi r24,lo8(__c.1569)
+  67 0038 90E0      		ldi r25,hi8(__c.1569)
+  68 003a 0E94 0000 		call print_P
+  69               	.LSM8:
+  70 003e 00C0      		rjmp .L1
+  71               	.L4:
+  72               	.LSM9:
+  73 0040 80E0      		ldi r24,lo8(__c.1571)
+  74 0042 90E0      		ldi r25,hi8(__c.1571)
+  75 0044 0E94 0000 		call print_P
+  76               	.LSM10:
+  77 0048 812F      		mov r24,r17
+  78 004a 0E94 0000 		call usb_debug_putchar
+  79               	.LSM11:
+  80 004e 8AE3      		ldi r24,lo8(58)
+  81 0050 0E94 0000 		call usb_debug_putchar
+  82               	.LVL4:
+  83               	.LBB28:
+  84               	.LSM12:
+  85 0054 E12F      		mov r30,r17
+  86 0056 F0E0      		ldi r31,lo8(0)
+  87 0058 E050      		subi r30,lo8(-(morse_code_table-65))
+  88 005a F040      		sbci r31,hi8(-(morse_code_table-65))
+  89               	/* #APP */
+  90               	 ;  96 "blinky.c" 1
+  91 005c 1491      		lpm r17, Z
+  92               		
+  93               	 ;  0 "" 2
+  94               	.LVL5:
+  95               	/* #NOAPP */
+  96               	.LBE28:
+  97               	.LSM13:
+  98 005e 012F      		mov r16,r17
+  99 0060 0770      		andi r16,lo8(7)
+ 100               	.LVL6:
+ 101 0062 00C0      		rjmp .L5
+ 102               	.LVL7:
+ 103               	.L8:
+ 104               	.LSM14:
+ 105 0064 5E9A      		sbi 43-32,6
+ 106               	.LSM15:
+ 107 0066 17FF      		sbrs r17,7
+ 108 0068 00C0      		rjmp .L6
+ 109               	.LSM16:
+ 110 006a 80E0      		ldi r24,lo8(__c.1576)
+ 111 006c 90E0      		ldi r25,hi8(__c.1576)
+ 112 006e 0E94 0000 		call print_P
+ 113               	.LVL8:
+ 114               	.LBB29:
+ 115               	.LBB30:
+ 116               	.LSM17:
+ 117 0072 8FEF      		 ldi r24,lo8(767999)
+ 118 0074 97EB      	    ldi r25,hi8(767999)
+ 119 0076 ABE0      	    ldi r26,hlo8(767999)
+ 120 0078 8150      	    1:subi r24,1
+ 121 007a 9040      	    sbci r25,0
+ 122 007c A040      	    sbci r26,0
+ 123 007e 01F4      	    brne 1b
+ 124 0080 00C0      		rjmp .L9
+ 125               	.LVL9:
+ 126               	.L6:
+ 127               	.LBE30:
+ 128               	.LBE29:
+ 129               	.LSM18:
+ 130 0082 80E0      		ldi r24,lo8(__c.1578)
+ 131 0084 90E0      		ldi r25,hi8(__c.1578)
+ 132 0086 0E94 0000 		call print_P
+ 133               	.LVL10:
+ 134               	.LBB31:
+ 135               	.LBB32:
+ 136               	.LSM19:
+ 137 008a 8FEF      		 ldi r24,lo8(255999)
+ 138 008c 97EE      	    ldi r25,hi8(255999)
+ 139 008e A3E0      	    ldi r26,hlo8(255999)
+ 140 0090 8150      	    1:subi r24,1
+ 141 0092 9040      	    sbci r25,0
+ 142 0094 A040      	    sbci r26,0
+ 143 0096 01F4      	    brne 1b
+ 144               	.LVL11:
+ 145               	.L9:
+ 146 0098 00C0      		rjmp .
+ 147 009a 0000      		nop
+ 148               	.LBE32:
+ 149               	.LBE31:
+ 150               	.LSM20:
+ 151 009c 5E98      		cbi 43-32,6
+ 152               	.LVL12:
+ 153               	.LBB33:
+ 154               	.LBB34:
+ 155               	.LSM21:
+ 156 009e 8FEF      		 ldi r24,lo8(255999)
+ 157 00a0 97EE      	    ldi r25,hi8(255999)
+ 158 00a2 A3E0      	    ldi r26,hlo8(255999)
+ 159 00a4 8150      	    1:subi r24,1
+ 160 00a6 9040      	    sbci r25,0
+ 161 00a8 A040      	    sbci r26,0
+ 162 00aa 01F4      	    brne 1b
+ 163 00ac 00C0      		rjmp .
+ 164 00ae 0000      		nop
+ 165               	.LBE34:
+ 166               	.LBE33:
+ 167               	.LSM22:
+ 168 00b0 110F      		lsl r17
+ 169               	.LVL13:
+ 170               	.LSM23:
+ 171 00b2 0150      		subi r16,lo8(-(-1))
+ 172               	.LVL14:
+ 173               	.L5:
+ 174               	.LSM24:
+ 175 00b4 0023      		tst r16
+ 176 00b6 01F4      		brne .L8
+ 177               	.LSM25:
+ 178 00b8 80E0      		ldi r24,lo8(__c.1583)
+ 179 00ba 90E0      		ldi r25,hi8(__c.1583)
+ 180 00bc 0E94 0000 		call print_P
+ 181               	.LVL15:
+ 182               	.LBB35:
+ 183               	.LBB36:
+ 184               	.LSM26:
+ 185 00c0 8FEF      		 ldi r24,lo8(511999)
+ 186 00c2 9FEC      	    ldi r25,hi8(511999)
+ 187 00c4 A7E0      	    ldi r26,hlo8(511999)
+ 188 00c6 8150      	    1:subi r24,1
+ 189 00c8 9040      	    sbci r25,0
+ 190 00ca A040      	    sbci r26,0
+ 191 00cc 01F4      	    brne 1b
+ 192               	.LVL16:
+ 193               	.L10:
+ 194 00ce 00C0      		rjmp .
+ 195 00d0 0000      		nop
+ 196               	.L1:
+ 197               	/* epilogue start */
+ 198               	.LBE36:
+ 199               	.LBE35:
+ 200               	.LSM27:
+ 201 00d2 1F91      		pop r17
+ 202 00d4 0F91      		pop r16
+ 203 00d6 0895      		ret
+ 204               	.LFE7:
+ 206               		.section	.text.morse_P,"ax",@progbits
+ 207               	.global	morse_P
+ 209               	morse_P:
+ 210               	.LFB8:
+ 211               	.LSM28:
+ 212               	.LVL17:
+ 213 0000 CF93      		push r28
+ 214 0002 DF93      		push r29
+ 215               	/* prologue: function */
+ 216               	/* frame size = 0 */
+ 217               	/* stack size = 2 */
+ 218               	.L__stack_usage = 2
+ 219 0004 EC01      		movw r28,r24
+ 220               	.LVL18:
+ 221               	.L13:
+ 222               	.LSM29:
+ 223 0006 FE01      		movw r30,r28
+ 224               	.LVL19:
+ 225               	.LBB37:
+ 226               	.LSM30:
+ 227 0008 2196      		adiw r28,1
+ 228               	.LVL20:
+ 229               	/* #APP */
+ 230               	 ;  121 "blinky.c" 1
+ 231 000a 8491      		lpm r24, Z
+ 232               		
+ 233               	 ;  0 "" 2
+ 234               	.LVL21:
+ 235               	/* #NOAPP */
+ 236               	.LBE37:
+ 237               	.LSM31:
+ 238 000c 8823      		tst r24
+ 239 000e 01F0      		breq .L12
+ 240               	.LSM32:
+ 241 0010 0E94 0000 		call morse_character
+ 242               	.LVL22:
+ 243               	.LSM33:
+ 244 0014 00C0      		rjmp .L13
+ 245               	.LVL23:
+ 246               	.L12:
+ 247               	.LSM34:
+ 248 0016 80E0      		ldi r24,lo8(__c.1594)
+ 249 0018 90E0      		ldi r25,hi8(__c.1594)
+ 250               	.LVL24:
+ 251 001a 0E94 0000 		call print_P
+ 252               	/* epilogue start */
+ 253               	.LSM35:
+ 254 001e DF91      		pop r29
+ 255 0020 CF91      		pop r28
+ 256               	.LVL25:
+ 257 0022 0895      		ret
+ 258               	.LFE8:
+ 260               		.section	.text.main,"ax",@progbits
+ 261               	.global	main
+ 263               	main:
+ 264               	.LFB6:
+ 265               	.LSM36:
+ 266 0000 1F93      		push r17
+ 267               	/* prologue: function */
+ 268               	/* frame size = 0 */
+ 269               	/* stack size = 1 */
+ 270               	.L__stack_usage = 1
+ 271               	.LSM37:
+ 272 0002 80E8      		ldi r24,lo8(-128)
+ 273 0004 8093 6100 		sts 97,r24
+ 274 0008 1092 6100 		sts 97,__zero_reg__
+ 275               	.LSM38:
+ 276 000c 569A      		sbi 42-32,6
+ 277               	.LSM39:
+ 278 000e 5E98      		cbi 43-32,6
+ 279               	.LSM40:
+ 280 0010 0E94 0000 		call usb_init
+ 281               	.LSM41:
+ 282 0014 10E0      		ldi r17,lo8(0)
+ 283 0016 00C0      		rjmp .L18
+ 284               	.L16:
+ 285               	.LSM42:
+ 286 0018 80E0      		ldi r24,lo8(__c.1552)
+ 287 001a 90E0      		ldi r25,hi8(__c.1552)
+ 288 001c 0E94 0000 		call morse_P
+ 289               	.LVL26:
+ 290               	.LBB38:
+ 291               	.LBB39:
+ 292               	.LSM43:
+ 293 0020 8FEF      		 ldi r24,lo8(4799999)
+ 294 0022 9DE3      	    ldi r25,hi8(4799999)
+ 295 0024 A9E4      	    ldi r26,hlo8(4799999)
+ 296 0026 8150      	    1:subi r24,1
+ 297 0028 9040      	    sbci r25,0
+ 298 002a A040      	    sbci r26,0
+ 299 002c 01F4      	    brne 1b
+ 300 002e 00C0      		rjmp .
+ 301 0030 0000      		nop
+ 302               	.LBE39:
+ 303               	.LBE38:
+ 304               	.LSM44:
+ 305 0032 1F5F      		subi r17,lo8(-(1))
+ 306               	.LVL27:
+ 307               	.L18:
+ 308               	.LSM45:
+ 309 0034 1630      		cpi r17,lo8(6)
+ 310 0036 00F0      		brlo .L16
+ 311               	.LSM46:
+ 312 0038 80E0      		ldi r24,lo8(__c.1557)
+ 313 003a 90E0      		ldi r25,hi8(__c.1557)
+ 314 003c 0E94 0000 		call morse_P
+ 315               	.LVL28:
+ 316               	.LBB40:
+ 317               	.LBB41:
+ 318               	.LSM47:
+ 319 0040 8FEF      		 ldi r24,lo8(12799999)
+ 320 0042 9FE4      	    ldi r25,hi8(12799999)
+ 321 0044 A3EC      	    ldi r26,hlo8(12799999)
+ 322 0046 8150      	    1:subi r24,1
+ 323 0048 9040      	    sbci r25,0
+ 324 004a A040      	    sbci r26,0
+ 325 004c 01F4      	    brne 1b
+ 326 004e 00C0      		rjmp .
+ 327 0050 0000      		nop
+ 328               	.LSM48:
+ 329 0052 10E0      		ldi r17,lo8(0)
+ 330               	.LVL29:
+ 331 0054 00C0      		rjmp .L16
+ 332               	.LBE41:
+ 333               	.LBE40:
+ 334               	.LFE6:
+ 336               	.global	morse_code_table
+ 337               		.section	.progmem.data,"a",@progbits
+ 340               	morse_code_table:
+ 341 0000 42        		.byte	66
+ 342 0001 84        		.byte	-124
+ 343 0002 A4        		.byte	-92
+ 344 0003 83        		.byte	-125
+ 345 0004 01        		.byte	1
+ 346 0005 24        		.byte	36
+ 347 0006 C3        		.byte	-61
+ 348 0007 04        		.byte	4
+ 349 0008 02        		.byte	2
+ 350 0009 74        		.byte	116
+ 351 000a A3        		.byte	-93
+ 352 000b 44        		.byte	68
+ 353 000c C2        		.byte	-62
+ 354 000d 82        		.byte	-126
+ 355 000e E3        		.byte	-29
+ 356 000f 64        		.byte	100
+ 357 0010 D4        		.byte	-44
+ 358 0011 43        		.byte	67
+ 359 0012 03        		.byte	3
+ 360 0013 81        		.byte	-127
+ 361 0014 23        		.byte	35
+ 362 0015 14        		.byte	20
+ 363 0016 63        		.byte	99
+ 364 0017 94        		.byte	-108
+ 365 0018 B4        		.byte	-76
+ 366 0019 C4        		.byte	-60
+ 369               	__c.1594:
+ 370 001a 0A00      		.string	"\n"
+ 373               	__c.1583:
+ 374 001c 0A00      		.string	"\n"
+ 377               	__c.1578:
+ 378 001e 2064 6974 		.string	" dit"
+ 378      00
+ 381               	__c.1576:
+ 382 0023 2064 6168 		.string	" dah"
+ 382      00
+ 385               	__c.1571:
+ 386 0028 4368 6172 		.string	"Char "
+ 386      2000 
+ 389               	__c.1569:
+ 390 002e 0A00      		.string	"\n"
+ 393               	__c.1567:
+ 394 0030 4F70 7073 		.string	"Opps, unsupported character: "
+ 394      2C20 756E 
+ 394      7375 7070 
+ 394      6F72 7465 
+ 394      6420 6368 
+ 397               	__c.1565:
+ 398 004e 5370 6163 		.string	"Space\n"
+ 398      650A 00
+ 401               	__c.1557:
+ 402 0055 444F 4553 		.string	"DOES ANYBODY STILL KNOW MORSE CODE?"
+ 402      2041 4E59 
+ 402      424F 4459 
+ 402      2053 5449 
+ 402      4C4C 204B 
+ 405               	__c.1552:
+ 406 0079 534F 5300 		.string	"SOS"
+ 447               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 blinky.c
+     /tmp/ccLUeAmF.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccLUeAmF.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccLUeAmF.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccLUeAmF.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccLUeAmF.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccLUeAmF.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccLUeAmF.s:19     .text.morse_character:00000000 morse_character
+     /tmp/ccLUeAmF.s:397    .progmem.data:0000004e __c.1565
+     /tmp/ccLUeAmF.s:393    .progmem.data:00000030 __c.1567
+     /tmp/ccLUeAmF.s:389    .progmem.data:0000002e __c.1569
+     /tmp/ccLUeAmF.s:385    .progmem.data:00000028 __c.1571
+     /tmp/ccLUeAmF.s:340    .progmem.data:00000000 morse_code_table
+     /tmp/ccLUeAmF.s:381    .progmem.data:00000023 __c.1576
+     /tmp/ccLUeAmF.s:377    .progmem.data:0000001e __c.1578
+     /tmp/ccLUeAmF.s:373    .progmem.data:0000001c __c.1583
+     /tmp/ccLUeAmF.s:209    .text.morse_P:00000000 morse_P
+     /tmp/ccLUeAmF.s:369    .progmem.data:0000001a __c.1594
+     /tmp/ccLUeAmF.s:263    .text.main:00000000 main
+     /tmp/ccLUeAmF.s:405    .progmem.data:00000079 __c.1552
+     /tmp/ccLUeAmF.s:401    .progmem.data:00000055 __c.1557
+
+UNDEFINED SYMBOLS
+print_P
+usb_debug_putchar
+usb_init

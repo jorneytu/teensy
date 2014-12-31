@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASLINKFLAGS	Makefile	/^ASLINKFLAGS = --code-loc 0x8000 --data-loc 0x30 --xram-loc 0x6000$/;"	m
+FAST_FONT_INDEX	lcd_buffer.h	22;"	d
+LCD_BYTES_PER_LINE	lcd_driver.h	26;"	d
+LCD_HORIZ_SIZE	lcd_driver.h	23;"	d
+LCD_USE_FAST_ASM	lcd_buffer.h	27;"	d
+LCD_VERT_SIZE	lcd_driver.h	25;"	d
+PAULMON2_H_INCLUDED	paulmon2.h	2;"	d
+PM2_PROGRAM_TYPE	paulmon2.h	21;"	d
+SDCCCFLAGS	Makefile	/^SDCCCFLAGS = --model-small$/;"	m
+SUPPORT_DIAGONAL_LINES	lcd_buffer.h	12;"	d
+__LCD_BUFFER_INCLUDED	lcd_buffer.h	2;"	d
+__LCD_DRIVER_INCLUDED	lcd_driver.h	2;"	d
+bitmask	lcd_buffer.c	/^static code unsigned char bitmask[8]={1,2,4,8,16,32,64,128};$/;"	v	file:
+buf_clear	lcd_buffer.c	/^void buf_clear(void)$/;"	f
+buf_draw	lcd_buffer.c	/^void buf_draw(code unsigned char *shape)$/;"	f
+buf_font	lcd_buffer.c	/^code unsigned char * data buf_font;$/;"	v
+buf_line	lcd_buffer.h	54;"	d
+buf_line_d	lcd_buffer.c	/^void buf_line_d(unsigned long two_pts)$/;"	f
+buf_pixel	lcd_buffer.h	50;"	d
+buf_pixel_i	lcd_buffer.c	/^void buf_pixel_i(unsigned int x_and_y)$/;"	f
+buf_putchar	lcd_buffer.c	/^void buf_putchar(unsigned char c)$/;"	f
+buf_set_font	lcd_buffer.h	38;"	d
+buf_set_position	lcd_buffer.h	34;"	d
+buf_x	lcd_buffer.c	/^data unsigned char buf_x, buf_y;$/;"	v
+buf_y	lcd_buffer.c	/^data unsigned char buf_x, buf_y;$/;"	v
+cksum	paulmon2.h	/^	unsigned int cksum;$/;"	m	struct:paulmon2_header_struct
+down	lcd_buffer.c	/^static bit down;$/;"	v	file:
+font_4x6	font_4x6.c	/^const unsigned char font_4x6[] = {$/;"	v
+font_5x7	font_5x7.c	/^const unsigned char font_5x7[] = {$/;"	v
+font_6x10	font_6x10.c	/^const unsigned char font_6x10[] = {$/;"	v
+font_6x13B	font_6x13B.c	/^const unsigned char font_6x13B[] = {$/;"	v
+font_7x13B	font_7x13B.c	/^const unsigned char font_7x13B[] = {$/;"	v
+font_9x15	font_9x15.c	/^const unsigned char font_9x15[] = {$/;"	v
+font_luBS14	font_luBS14.c	/^const unsigned char font_luBS14[] = {$/;"	v
+font_lubI19	font_lubI19.c	/^const unsigned char font_lubI19[] = {$/;"	v
+font_timBI24	font_timBI24.c	/^const unsigned char font_timBI24[] = {$/;"	v
+font_timR14	font_timR14.c	/^const unsigned char font_timR14[] = {$/;"	v
+lcd_buffer	lcd_buffer.c	/^xdata unsigned char lcd_buffer[1024];$/;"	v
+lcd_init	lcd_driver.c	/^void lcd_init(void)$/;"	f
+lcd_set_xy	lcd_driver.h	18;"	d
+lcd_update	lcd_driver.c	/^void lcd_update(void)$/;"	f
+left_cmd	lcd_driver.c	/^volatile xdata at 0xFE04 unsigned char left_cmd;$/;"	v
+left_command	lcd_driver.c	16;"	d	file:
+left_data	lcd_driver.c	/^volatile xdata at 0xFE06 unsigned char left_data;$/;"	v
+left_status	lcd_driver.c	/^volatile xdata at 0xFE05 unsigned char left_status;$/;"	v
+left_write	lcd_driver.c	18;"	d	file:
+length	paulmon2.h	/^	unsigned int length;$/;"	m	struct:paulmon2_header_struct
+main	main.c	/^void main()$/;"	f
+name	paulmon2.h	/^	char name[32];$/;"	m	struct:paulmon2_header_struct
+paulmon2_header_struct	paulmon2.h	/^typedef struct paulmon2_header_struct {$/;"	s
+paulmon2_header_t	paulmon2.h	/^} paulmon2_header_t;$/;"	t	typeref:struct:paulmon2_header_struct
+pm2_cin	paulmon2.c	/^char pm2_cin(void)$/;"	f
+pm2_entry_cin	paulmon2.c	31;"	d	file:
+pm2_entry_cout	paulmon2.c	30;"	d	file:
+pm2_entry_erblock	paulmon2.c	42;"	d	file:
+pm2_entry_esc	paulmon2.c	35;"	d	file:
+pm2_entry_newline	paulmon2.c	40;"	d	file:
+pm2_entry_phex	paulmon2.c	32;"	d	file:
+pm2_entry_phex16	paulmon2.c	33;"	d	file:
+pm2_entry_pint16u	paulmon2.c	39;"	d	file:
+pm2_entry_pint8	paulmon2.c	38;"	d	file:
+pm2_entry_pint8u	paulmon2.c	37;"	d	file:
+pm2_entry_prgm	paulmon2.c	41;"	d	file:
+pm2_entry_pstr	paulmon2.c	34;"	d	file:
+pm2_entry_upper	paulmon2.c	36;"	d	file:
+pm2_esc	paulmon2.c	/^char pm2_esc(void)$/;"	f
+pm2_interrupt_remap	paulmon2.c	/^void pm2_interrupt_remap(void)$/;"	f
+pm2_upper	paulmon2.c	/^char pm2_upper(char c)$/;"	f
+print_to_lcd	main.c	/^bit print_to_lcd=0;$/;"	v
+program_type	paulmon2.h	/^	unsigned long program_type;$/;"	m	struct:paulmon2_header_struct
+putchar	main.c	/^void putchar(char c)$/;"	f
+reserved1	paulmon2.h	/^	unsigned long reserved1;$/;"	m	struct:paulmon2_header_struct
+reserved2	paulmon2.h	/^	unsigned long reserved2;$/;"	m	struct:paulmon2_header_struct
+reserved3	paulmon2.h	/^	unsigned long reserved3;$/;"	m	struct:paulmon2_header_struct
+right_cmd	lcd_driver.c	/^volatile xdata at 0xFE08 unsigned char right_cmd;$/;"	v
+right_command	lcd_driver.c	17;"	d	file:
+right_data	lcd_driver.c	/^volatile xdata at 0xFE0A unsigned char right_data;$/;"	v
+right_status	lcd_driver.c	/^volatile xdata at 0xFE09 unsigned char right_status;$/;"	v
+right_write	lcd_driver.c	19;"	d	file:
+signature	paulmon2.h	/^	unsigned long signature;$/;"	m	struct:paulmon2_header_struct
+user	paulmon2.h	/^	unsigned long user;$/;"	m	struct:paulmon2_header_struct
